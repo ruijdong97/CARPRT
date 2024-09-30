@@ -16,7 +16,7 @@ def get_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', dest='config', required=True, help='settings of WPE on specific dataset in yaml format.')
     parser.add_argument('--datasets', dest='datasets', type=str, required=True, help="Datasets to process")
-    parser.add_argument('--data-root', dest='data_root', type=str, default='/data/gpfs/projects/punim2161/datasets', help='Path to the datasets directory. Default is ./dataset/')
+    parser.add_argument('--data-root', dest='data_root', type=str, default='/data/path', help='Path to the datasets directory. Default is ./dataset/')
     parser.add_argument('--backbone', dest='backbone', type=str, choices=['RN50', 'ViT-B/16'], required=True, help='CLIP model backbone to use: RN50 or ViT-B/16.')
     parser.add_argument('--topk', dest='topk',type=int,default=1, help='the number of the choosen class based on similarity' )
     parser.add_argument('--temp', dest='temp',type=float,default=3.0, help='the temperature' )
